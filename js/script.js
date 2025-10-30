@@ -1,11 +1,12 @@
-
 // Saludo inicial con alert
-alert("🍸 Bienvenido a Diamond Dust Drinks — ¡Disfruta de nuestra carta artesanal!");
+alert(
+  "🍸 Bienvenido a Diamond Dust Drinks — ¡Disfruta de nuestra carta artesanal!"
+);
 
 // Función para verificar edad
 function verificarEdad() {
   let edad = prompt("Por favor ingresa tu edad:");
-  
+
   // Operadores de igualdad y relación
   if (edad == null || edad == "") {
     alert("No ingresaste una edad. Intenta de nuevo 🍹");
@@ -40,12 +41,12 @@ while (visitas < 3) {
 // Función que calcula precio total simulado
 function calcularTotal() {
   let cantidad = Number(prompt("¿Cuántos cócteles deseas pedir?"));
-  let precioUnitario = 9;
+  let precioUnitario = 9000;
   let total = cantidad * precioUnitario;
 
   // Uso de if simple
   if (cantidad > 0) {
-    alert("Total de tu pedido: €" + total);
+    alert("Total de tu pedido: $" + total);
   } else {
     alert("Cantidad no válida ❌");
   }
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   boton.className = "btn";
   boton.style.margin = "20px";
   document.querySelector(".cta").appendChild(boton);
-  
+
   boton.addEventListener("click", calcularTotal);
 });
 
