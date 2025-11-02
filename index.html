@@ -8,330 +8,296 @@
       name="description"
       content="Bar artesanal: carta de cócteles, cervezas craft y platos para maridar."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- ✅ Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- ✅ Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- ✅ Estilos personalizados -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./js/script.js"></script>
+
+    <!-- ✅ Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ✅ Script principal -->
+    <script src="./js/script.js" defer></script>
   </head>
+
   <body>
-    <!-- Encabezado -->
-    <header class="header">
-      <a class="brand" href="#inicio">Diamond Dust Drinks</a>
-      <input
-        id="nav"
-        class="nav-toggle"
-        type="checkbox"
-        aria-label="Abrir menú"
-      />
-      <label class="burger" for="nav" aria-hidden="true"></label>
-      <nav class="nav">
-        <a href="#cocteles">Cócteles</a>
-        <a href="#cervezas">Cervezas</a>
-        <a href="#maridaje">Maridaje</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+    <!-- ==========================
+    🧭 Navbar
+    =========================== -->
+    <header
+      class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold text-uppercase" href="#inicio">
+          Diamond Dust Drinks
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#cocteles">Cócteles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cervezas">Cervezas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#maridaje">Maridaje</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main id="inicio">
-      <!-- Hero -->
-      <section class="hero">
-        <h1>
-          Bar & Craft · cócteles clásicos, cervezas locales y maridajes
+    <!-- ==========================
+    🌅 Hero
+    =========================== -->
+    <section class="hero text-center">
+      <div class="container">
+        <h1 class="fw-bold">
+          Bar & Craft · Cócteles clásicos, cervezas locales y maridajes
           pensados.
         </h1>
-        <p>
+        <p class="lead mt-3">
           Ingredientes frescos, técnica cuidadosa y una carta pequeña que cambia
           con la temporada.
         </p>
-        <a class="btn" href="#cocteles">Ver carta</a>
-      </section>
+        <a class="btn btn-warning mt-4" href="#cocteles">Ver carta</a>
+      </div>
+    </section>
 
-      <!-- Cócteles -->
-      <section id="cocteles" class="section">
-        <div class="tag tag--cocktail">
-          <span class="dot" aria-hidden="true"></span> Cócteles
+    <!-- ==========================
+    🍸 Cócteles
+    =========================== -->
+    <section id="cocteles" class="section container">
+      <span class="badge">🍸 Cócteles</span>
+      <h2>Clásicos con nuestro toque</h2>
+      <p class="subtitle">
+        Sabores balanceados, reinterpretados con ingredientes locales.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h5 class="card-title">Negroni Barrica</h5>
+          <p class="card-text">
+            Ginebra, bitter rojo, vermut dulce, twist de naranja.
+          </p>
+          <p class="price">$10.000</p>
         </div>
-        <h2>Clásicos con nuestro toque</h2>
-        <div class="grid">
-          <article class="card" aria-labelledby="cl1">
-            <div class="row">
-              <div>
-                <div class="title" id="cl1">Negroni Barrica</div>
-                <p class="desc">
-                  Ginebra, bitter rojo, vermut dulce, twist de naranja.
-                </p>
-              </div>
-              <div class="price">$10.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Whisky Sour</div>
-                <p class="desc">
-                  Bourbon, limón, sirope simple, clara. Bitters.
-                </p>
-              </div>
-              <div class="price">$10.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Margarita de temporada</div>
-                <p class="desc">
-                  Tequila blanco, triple sec, lima. Borde de sal ahumada.
-                </p>
-              </div>
-              <div class="price">$10.000</div>
-            </div>
-          </article>
 
-          <article class="card" aria-labelledby="cl2">
-            <div class="row">
-              <div>
-                <div class="title" id="cl2">Espresso Martini</div>
-                <p class="desc">
-                  Vodka, espresso fresco, licor de café, vainilla.
-                </p>
-              </div>
-              <div class="price">$15.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Mojito de huerto</div>
-                <p class="desc">
-                  Ron, menta, lima, azúcar moreno, soda. Hielo picado.
-                </p>
-              </div>
-              <div class="price">$30.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Aperol Spritz</div>
-                <p class="desc">Aperol, prosecco, soda, rodaja de naranja.</p>
-              </div>
-              <div class="price">$27.000</div>
-            </div>
-          </article>
+        <div class="card">
+          <h5 class="card-title">Whisky Sour</h5>
+          <p class="card-text">
+            Bourbon, limón, sirope simple, clara. Bitters.
+          </p>
+          <p class="price">$10.000</p>
         </div>
-      </section>
 
-      <!-- Cervezas -->
-      <section id="cervezas" class="section">
-        <div class="tag tag--beer">
-          <span class="dot" aria-hidden="true"></span> Cervezas artesanales
+        <div class="card">
+          <h5 class="card-title">Margarita de temporada</h5>
+          <p class="card-text">
+            Tequila blanco, triple sec, lima. Sal ahumada.
+          </p>
+          <p class="price">$10.000</p>
         </div>
-        <h2>Lotes pequeños, siempre rotando</h2>
-        <div class="grid">
-          <article class="card">
-            <div class="row">
-              <div>
-                <div class="title">Pale Ale “Lúpulo Verde” (5.2%)</div>
-                <p class="desc">Cítrica y floral. Lúpulos Cascade y Mosaic.</p>
-              </div>
-              <div class="price">$24.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">IPA Nebulosa (6.5%)</div>
-                <p class="desc">Turbia, tropical, final amargo amable.</p>
-              </div>
-              <div class="price">$26.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Stout Cacao (5.8%)</div>
-                <p class="desc">Notas de cacao y café. Cuerpo medio.</p>
-              </div>
-              <div class="price">$35.000</div>
-            </div>
-          </article>
 
-          <article class="card">
-            <div class="row">
-              <div>
-                <div class="title">Sour Frambuesa (4.8%)</div>
-                <p class="desc">Ácida y refrescante, fruta real.</p>
-              </div>
-              <div class="price">$45.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Lager de Casa (4.7%)</div>
-                <p class="desc">Limpia, crujiente, muy bebible.</p>
-              </div>
-              <div class="price">$5.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Porter Avena (5.6%)</div>
-                <p class="desc">Tostada, sedosa, vainilla sutil.</p>
-              </div>
-              <div class="price">$6.000</div>
-            </div>
-          </article>
+        <div class="card">
+          <h5 class="card-title">Espresso Martini</h5>
+          <p class="card-text">
+            Vodka, espresso fresco, licor de café, vainilla.
+          </p>
+          <p class="price">$15.000</p>
         </div>
-        <p class="kicker">Pregúntanos por las invitadas de la semana.</p>
-      </section>
 
-      <!-- Maridaje -->
-      <section id="maridaje" class="section">
-        <div class="tag tag--food">
-          <span class="dot" aria-hidden="true"></span> Maridaje
+        <div class="card">
+          <h5 class="card-title">Mojito de huerto</h5>
+          <p class="card-text">
+            Ron, menta, lima, azúcar moreno, soda. Hielo picado.
+          </p>
+          <p class="price">$30.000</p>
         </div>
-        <h2>Platos pensados para tus bebidas</h2>
-        <div class="grid">
-          <article class="card">
-            <div class="row">
-              <div>
-                <div class="title">Tacos de cochinita</div>
-                <p class="desc">
-                  Cebolla encurtida, lima. Ideal con IPA Nebulosa.
-                </p>
-              </div>
-              <div class="price">$25.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Tabla de quesos locales</div>
-                <p class="desc">Pan de masa madre. Perfecta con Pale Ale.</p>
-              </div>
-              <div class="price">$15.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Bao de setas glaseadas</div>
-                <p class="desc">
-                  Glaseado de soja y sésamo. Acompaña un Stout o Porter.
-                </p>
-              </div>
-              <div class="price">$15.000</div>
-            </div>
-          </article>
 
-          <article class="card">
-            <div class="row">
-              <div>
-                <div class="title">Papas bravas “ahumadas”</div>
-                <p class="desc">
-                  Alioli suave + salsa brava. Va con Lager de Casa.
-                </p>
-              </div>
-              <div class="price">$9.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Tiradito cítrico</div>
-                <p class="desc">
-                  Pez del día, ají amarillo. Marida con Sour Frambuesa.
-                </p>
-              </div>
-              <div class="price">$20.000</div>
-            </div>
-            <div class="row">
-              <div>
-                <div class="title">Brownie tibio + sal marina</div>
-                <p class="desc">
-                  Helado de vainilla. Para Espresso Martini o Stout.
-                </p>
-              </div>
-              <div class="price">$10.000</div>
-            </div>
-          </article>
+        <div class="card">
+          <h5 class="card-title">Aperol Spritz</h5>
+          <p class="card-text">Aperol, prosecco, soda, rodaja de naranja.</p>
+          <p class="price">$27.000</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Contacto / CTA -->
-      <section id="contacto" class="section cta">
-        <h2>Reserva o pide para llevar</h2>
-        <p class="desc">L–J 18:00–00:00 · V–S 18:00–02:00 · D 18:00–23:00</p>
-        <p class="desc">
-          C/ Diamond Dust Drinks 123, Ciudad ·
-          <a class="btn outline" href="tel:+57999999999">Llamar</a>
-        </p>
-        <p>
-          <a class="btn" href="mailto:hola@diamonddustdrinks.bar"
-            >hola@diamonddustdrinks.bar</a
-          >
-        </p>
-      </section>
-    </main>
+    <!-- ==========================
+    🍺 Cervezas
+    =========================== -->
+    <section id="cervezas" class="section container">
+      <span class="badge">🍺 Cervezas artesanales</span>
+      <h2>Lotes pequeños, siempre rotando</h2>
+      <p class="subtitle">Sabores locales, frescos y de producción limitada.</p>
 
+      <div class="grid">
+        <div class="card">
+          <h5 class="card-title">Pale Ale “Lúpulo Verde” (5.2%)</h5>
+          <p class="card-text">Cítrica y floral. Lúpulos Cascade y Mosaic.</p>
+          <p class="price">$24.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">IPA Nebulosa (6.5%)</h5>
+          <p class="card-text">Turbia, tropical, final amargo amable.</p>
+          <p class="price">$26.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Stout Cacao (5.8%)</h5>
+          <p class="card-text">Notas de cacao y café. Cuerpo medio.</p>
+          <p class="price">$35.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Sour Frambuesa (4.8%)</h5>
+          <p class="card-text">Ácida y refrescante, fruta real.</p>
+          <p class="price">$45.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Lager de Casa (4.7%)</h5>
+          <p class="card-text">Limpia, crujiente, muy bebible.</p>
+          <p class="price">$5.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Porter Avena (5.6%)</h5>
+          <p class="card-text">Tostada, sedosa, vainilla sutil.</p>
+          <p class="price">$6.000</p>
+        </div>
+      </div>
+
+      <p class="subtitle fst-italic mt-4">
+        Pregúntanos por las invitadas de la semana 🍻
+      </p>
+    </section>
+
+    <!-- ==========================
+    🍽️ Maridaje
+    =========================== -->
+    <section id="maridaje" class="section container">
+      <span class="badge">🍽️ Maridaje</span>
+      <h2>Platos pensados para tus bebidas</h2>
+      <p class="subtitle">
+        Pequeños bocados que complementan cada estilo de trago.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h5 class="card-title">Tacos de cochinita</h5>
+          <p class="card-text">
+            Cebolla encurtida, lima. Ideal con IPA Nebulosa.
+          </p>
+          <p class="price">$25.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Tabla de quesos locales</h5>
+          <p class="card-text">Pan de masa madre. Perfecta con Pale Ale.</p>
+          <p class="price">$15.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Bao de setas glaseadas</h5>
+          <p class="card-text">
+            Glaseado de soja y sésamo. Acompaña un Stout o Porter.
+          </p>
+          <p class="price">$15.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Papas bravas “ahumadas”</h5>
+          <p class="card-text">
+            Alioli suave + salsa brava. Va con Lager de Casa.
+          </p>
+          <p class="price">$9.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Tiradito cítrico</h5>
+          <p class="card-text">
+            Pez del día, ají amarillo. Marida con Sour Frambuesa.
+          </p>
+          <p class="price">$20.000</p>
+        </div>
+
+        <div class="card">
+          <h5 class="card-title">Brownie tibio + sal marina</h5>
+          <p class="card-text">
+            Helado de vainilla. Para Espresso Martini o Stout.
+          </p>
+          <p class="price">$10.000</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================
+📞 Contacto
+========================== -->
+    <section id="contacto" class="section">
+      <div class="container text-center">
+        <div class="row justify-content-center g-3">
+          <div class="col-12 col-md-3">
+            <a class="btn btn-outline-warning w-100" href="tel:+57999999999">
+              Llamar
+            </a>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <a
+              class="btn btn-warning w-100"
+              href="mailto:hola@diamonddustdrinks.bar"
+            >
+              Contactar
+            </a>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <button class="btn btn-warning w-100" onclick="calcularTotal()">
+              Calcular total
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================
+     Footer
+    =========================== -->
     <footer class="footer">
-      <small>© 2025 Diamond Dust Drinks · Hecho con buen gusto</small>
-      <label class="switch" title="Cambiar tema (claro/oscuro)">
-        <input
-          type="checkbox"
-          aria-label="Cambiar tema"
-          onclick="document.documentElement.setAttribute('data-theme', this.checked ? 'light' : 'dark')"
-        />
-      </label>
+      <small>© 2025 Diamond Dust Drinks · Hecho con buen gusto </small>
     </footer>
-
-    <!-- 💡 JavaScript con todas las funcionalidades -->
-    <script>
-      alert(
-        "🍸 Bienvenido a Diamond Dust Drinks — ¡Disfruta de nuestra carta artesanal!"
-      );
-
-      // Función para verificar edad
-      function verificarEdad() {
-        let edad = prompt("Por favor ingresa tu edad:");
-        if (edad == null || edad == "") {
-          alert("No ingresaste una edad. Intenta de nuevo 🍹");
-          return;
-        }
-
-        edad = Number(edad);
-        if (edad >= 18) {
-          alert("Perfecto, puedes ingresar al bar. 🥂");
-        } else if (edad > 0 && edad < 18) {
-          alert("Lo sentimos, el acceso es solo para mayores de edad 🚫");
-        } else {
-          alert("Edad inválida. Inténtalo nuevamente.");
-        }
-      }
-
-      verificarEdad();
-
-      // Bucle while con operador de incremento y break
-      let visitas = 0;
-      while (visitas < 3) {
-        visitas++;
-        console.log("Visita número: " + visitas);
-        if (visitas === 3) {
-          alert("¡Gracias por explorar nuestras secciones! 🎉");
-          break;
-        }
-      }
-
-      // Función para calcular total de pedido
-      function calcularTotal() {
-        let cantidad = Number(prompt("¿Cuántos cócteles deseas pedir?"));
-        let precioUnitario = 9000;
-        let total = cantidad * precioUnitario;
-
-        if (cantidad > 0) {
-          alert("Total de tu pedido: $ " + total);
-        } else {
-          alert("Cantidad no válida ❌");
-        }
-      }
-
-      // Crear un botón dinámico con evento
-      document.addEventListener("DOMContentLoaded", function () {
-        const boton = document.createElement("button");
-        boton.textContent = "🧾 Calcular total";
-        boton.className = "btn";
-        boton.style.margin = "20px";
-        document.querySelector(".cta").appendChild(boton);
-        boton.addEventListener("click", calcularTotal);
-      });
-
-      // Bucle for con mensajes en consola
-      for (let i = 1; i <= 3; i++) {
-        console.log("Promoción #" + i + ": Descuento especial en cócteles 🍹");
-      }
-    </script>
   </body>
 </html>
